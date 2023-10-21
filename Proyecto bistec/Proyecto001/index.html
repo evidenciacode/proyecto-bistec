@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Gourmet Bistec</title>
+    <link href="./css/bootstrap/bootstrap.css" rel="stylesheet">
+    <link href="./css/template/template.css" rel="stylesheet">
+    <script src="./js/bootstrap/bootstrap.js"></script>
+    <link rel="icon" href="/ejemplo12/img/icono.png">
+</head>
+
+<body style="background-color: rgb(50, 50, 50);">
+    <div style="background-color: rgba(149, 149, 149, 0.249);">
+        <nav class="navbar navbar-expand-lg color-navbar">
+            <div class="container-fluid">
+              
+            <img class="logo-rest" src="/ejemplo12/img/hhh.png" alt="Logo del restaurante">
+            <img class="letrero-rest" src="/ejemplo12/img/letrero.png" alt="Letrero del nombre del restuarnate">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        
+                        
+                        <li class="nav-item dropdown">
+                            
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="#">Action</a></li>
+                                <li><a class="dropdown-item" href="#">Another action</a></li>
+                                <li>
+                                    <hr class="dropdown-divider">
+                                </li>
+                                <li><a class="dropdown-item" href="#">Something else here</a></li>
+                            </ul>
+                        </li>
+                        
+                    </ul>
+                    
+                </div>
+            </div>
+        </nav>
+    </div>
+    <br>
+    <div class="container">
+        <div style="background-color: black;" class="card Shadow">
+            <div style="background-color: black;" class="card-body">
+                <h3 style=  "color: white; ">Menu</h3>
+                <div class="row row-cols-2 row-cols-sm-1 row-cols-md-4">
+                    <div class="col">
+                        <div class="container-fluid">
+                            <form class="row g-2">
+                                <div class="col-md-12">
+                                    <label  for="inputState" class="form-label">Mesa 1</label>
+                                    <select id="productos" style="background-color: rgb(125, 125, 125);" id="inputState" class="form-select menuItems">
+                                        <option style="color: rgb(240, 248, 255);" selected>Elige...</option>
+                                    </select>
+                                </div>
+
+                                <div class="col-12">
+                                    <button onclick="agregarPedido()" type="button"
+                                        class="">Agregar</button>
+                                </div>
+                            </form>
+                            <hr>
+                            <ul class="list-group">
+                                <li style="background-color: rgb(125, 125, 125);" class="list-group-item d-flex justify-content-between align-items-center">
+                                    <ul id="listaPedidos"></ul>
+                                    <span class="badge total-elements rounded-pill"></span>
+                                </li>
+                         
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="container-fluid">
+                            <form class="row g-2">
+                                <div class="col-md-12">
+                                    <label for="inputState" class="form-label">Mesa 2</label>
+                                    <select id="productos2" style="background-color: rgb(125, 125, 125)" id="inputState" class="form-select menuItems">
+                                        <option selected>Elige...</option>
+                                    </select>
+                                </div>
+                                <div class="col-12">
+                                    <button onclick="agregarPedido2()" type="button"
+                                        class="">Agregar</button>
+                                </div>
+                            </form>
+                            <hr>
+                            <ul class="list-group">
+                                <li style="background-color: rgb(125, 125, 125);" class="list-group-item d-flex justify-content-between align-items-center">
+                                    <ul id="listaPedidos2"></ul>
+                                    <span class="badge total-elements rounded-pill"></span>
+                                </li>
+                         
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="container-fluid">
+                            <form class="row g-2">
+                                <div class="col-md-12">
+                                    <label for="inputState" class="form-label">Mesa 3</label>
+                                    <select id="productos3" style="background-color: rgb(125, 125, 125)" id="inputState" class="form-select menuItems">
+                                        <option selected>Elige...</option>
+                                    </select>
+                                </div>
+                                <div class="col-12">
+                                    <button onclick="agregarPedido3()" type="button"
+                                        class="">Agregar</button>
+                                </div>
+                            </form>
+                            <hr>
+                            <ul class="list-group">
+                                <li style="background-color: rgb(125, 125, 125);" class="list-group-item d-flex justify-content-between align-items-center">
+                                    <ul id="listaPedidos3"></ul>
+                                    <span class="badge total-elements rounded-pill"></span>
+                                </li>
+                            
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="container-fluid">
+                            <form class="row g-2">
+                                <div class="col-md-12">
+                                    <label for="inputState" class="form-label">Mesa 4</label>
+                                    <select id="productos4" style="background-color: rgb(125, 125, 125)" id="inputState" class="form-select menuItems">
+                                        <option selected>Elige...</option>
+                                    </select>
+                                </div>
+                                <div class="col-12">
+                                    <button onclick="agregarPedido4()" type="button"
+                                        class="">Agregar</button>
+                                </div>
+                            </form>
+                            <hr>
+                            <ul class="list-group">
+                                <li style="background-color: rgb(125, 125, 125);" class="list-group-item d-flex justify-content-between align-items-center">
+                                    <ul id="listaPedidos4"></ul>
+                                    <span class="badge total-elements rounded-pill"></span>
+                                </li>
+                      
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <br>
+    <div class="container">
+        <div style="background-color: black;" class="card Shadow">
+            <div  class="card-body">
+                <h3 style="color: aliceblue;">Total</h3>
+                <table style="background-color: black;" class="table">
+                    <thead>
+                        <tr>
+                            <th style="background-color: rgb(125, 125, 125);" scope="col">Mesas</th>
+                            <th style="background-color: rgb(125, 125, 125);" scope="col">Mesero</th>
+                            <th style="background-color: rgb(125, 125, 125);" scope="col">Producto</th>
+                            <th style="background-color: rgb(125, 125, 125);" scope="col">Total</th>
+                        </tr>
+                    </thead>
+                    <tbody id="salesItems">
+                        <tr>
+                            <th style="background-color: rgb(255, 255, 255);" scope="row">1</th>
+                            <td style="background-color: rgb(255, 255, 255);">Jesus</td>
+                            <td style="background-color: rgb(255, 255, 255);">Otto</td>
+                            <td style="background-color: rgb(255, 255, 255);">@mdo</td>
+                        </tr>
+                    </tbody>
+                    <tbody id="salesItems2">
+                        <tr>
+                            <th style="background-color: rgb(255, 255, 255);" scope="row">2</th>
+                            <td style="background-color: rgb(255, 255, 255);">Jacob</td>
+                            <td style="background-color: rgb(255, 255, 255);">Thornton</td>
+                            <td style="background-color: rgb(255, 255, 255);">@fat</td>
+                        </tr>
+                    </tbody>
+                        <tr>
+                            <th style="background-color: rgb(255, 255, 255);" scope="row">3</th>
+                            <td style="background-color: rgb(255, 255, 255);" colspan="2">Larry the Bird</td>
+                            <td style="background-color: rgb(255, 255, 255);">@twitter</td>
+                        </tr>
+                        <tr>
+                            <th style="background-color: rgb(255, 255, 255);" scope="row">4</th>
+                            <td style="background-color: rgb(255, 255, 255);" colspan="2">Larry the Bird</td>
+                            <td style="background-color: rgb(255, 255, 255);">@twitter</td>
+                        </tr>
+                    
+                </table>
+            </div>
+        </div>
+    </div>
+    <script src="./js/template/template.js"></script>
+    <script src="./js/core/code.js"></script>
+</body>
+
+<!-- Footer -->
+<footer class="text-center text-lg-start bg-white text-muted">
+    <!-- Section: Social media -->
+    <section class="d-flex justify-content-center justify-content-lg-between p-4 border-bottom">
+        <!-- Right -->
+        <div>
+            <a href="" class="me-4 link-secondary">
+                <i class="fab fa-facebook-f"></i>
+            </a>
+            <a href="" class="me-4 link-secondary">
+                <i class="fab fa-twitter"></i>
+            </a>
+            <a href="" class="me-4 link-secondary">
+                <i class="fab fa-google"></i>
+            </a>
+            <a href="" class="me-4 link-secondary">
+                <i class="fab fa-instagram"></i>
+            </a>
+            <a href="" class="me-4 link-secondary">
+                <i class="fab fa-linkedin"></i>
+            </a>
+            <a href="" class="me-4 link-secondary">
+                <i class="fab fa-github"></i>
+            </a>
+        </div>
+        <!-- Right -->
+    </section>
+    <!-- Section: Social media -->
+
+    <!-- Section: Links  -->
+    <section class="">
+        <div class="container text-center text-md-start mt-5">
+            <!-- Grid row -->
+            <div class="row mt-3">
+                <!-- Grid column -->
+                <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
+                    <!-- Content -->
+                    <h6 class="text-uppercase fw-bold mb-4">
+                        <i class="fas fa-gem me-3 text-secondary"></i>The Gourmet Bistec
+                    </h6>
+                    <p>
+                        "The Gourmet Bistec" es un restaurante de renombre
+                         especializado en carnes, conocido por ofrecer cortes
+                        de alta calidad y experiencias gastronómicas excepcionales.
+                    </p>
+                </div>
+                <!-- Grid column -->
+
+                <!-- Grid column -->
+                <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
+                    <!-- Links -->
+                    <h6 class="text-uppercase fw-bold mb-4">
+                        Productos
+                    </h6>
+                    <p>
+                        <a href="#!" class="text-reset">Angular</a>
+                    </p>
+                    <p>
+                        <a href="#!" class="text-reset">React</a>
+                    </p>
+                    <p>
+                        <a href="#!" class="text-reset">Vue</a>
+                    </p>
+                    <p>
+                        <a href="#!" class="text-reset">Laravel</a>
+                    </p>
+                </div>
+                <!-- Grid column -->
+
+                <!-- Grid column -->
+                <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
+                    <!-- Links -->
+                    <h6 class="text-uppercase fw-bold mb-4">
+                        Useful links
+                    </h6>
+                    <p>
+                        <a href="#!" class="text-reset">Pricing</a>
+                    </p>
+                    <p>
+                        <a href="#!" class="text-reset">Settings</a>
+                    </p>
+                    <p>
+                        <a href="#!" class="text-reset">Orders</a>
+                    </p>
+                    <p>
+                        <a href="#!" class="text-reset">Help</a>
+                    </p>
+                </div>
+                <!-- Grid column -->
+
+                <!-- Grid column -->
+                <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
+                    <!-- Links -->
+                    <h6 class="text-uppercase fw-bold mb-4">Contacto</h6>
+                    <p><i class="fas fa-home me-3 text-secondary"></i> El Poblado, PB 10012, COL</p>
+                    <p>
+                        <i class="fas fa-envelope me-3 text-secondary"></i>
+                        thegourmetbistec@hotmail.com
+                    </p>
+                    <p><i class="fas fa-phone me-3 text-secondary"></i> + 57 312 765 354 46</p>
+                    <p><i class="fas fa-print me-3 text-secondary"></i> + 57 322 567 895 48</p>
+                </div>
+                <!-- Grid column -->
+            </div>
+            <!-- Grid row -->
+        </div>
+    </section>
+    <!-- Section: Links  -->
+
+    <!-- Copyright -->
+    <div class="text-center p-4" style="background-color: rgba(0, 0, 0, 0.025);">
+        © 2023 Copyright:
+        <a class="text-reset fw-bold" href="">The Gourmet Bistec</a>
+    </div>
+    <!-- Copyright -->
+</footer>
+<!-- Footer -->
+
+</html>
